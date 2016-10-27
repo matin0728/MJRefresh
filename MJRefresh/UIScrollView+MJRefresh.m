@@ -14,6 +14,7 @@
 
 @implementation NSObject (MJRefresh)
 
+
 + (void)exchangeInstanceMethod1:(SEL)method1 method2:(SEL)method2
 {
     method_exchangeImplementations(class_getInstanceMethod(self, method1), class_getInstanceMethod(self, method2));
@@ -44,7 +45,10 @@ static const char MJRefreshHeaderKey = '\0';
         [self didChangeValueForKey:@"mj_header"]; // KVO
     }
 
-    NSInteger a = 2.4;
+    NSString *a = @"Hello world!";
+    CGSize size = [a sizeWithFont:[UIFont systemFontOfSize:15]];
+    NSLog(@"Size is %.2f", size.width);
+#warning "Test worning"
 }
 
 - (MJRefreshHeader *)mj_header
