@@ -43,6 +43,8 @@ static const char MJRefreshHeaderKey = '\0';
                                  mj_header, OBJC_ASSOCIATION_ASSIGN);
         [self didChangeValueForKey:@"mj_header"]; // KVO
     }
+
+    NSInteger a = 2.4;
 }
 
 - (MJRefreshHeader *)mj_header
